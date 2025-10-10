@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BB2 Study - Supplementary Data Repository</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .file-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .file-list li {
+            background-color: #ecf0f1;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 3px;
+            border-left: 4px solid #3498db;
+        }
+        .file-list li strong {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .citation {
+            background-color: #fff9e6;
+            padding: 15px;
+            border-left: 4px solid #f39c12;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #7f8c8d;
+        }
+        .metadata {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BB2 Study</h1>
+        <p>Supplementary Data Repository</p>
+    </header>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>
+            This repository contains supplementary data and materials for the BB2 research study. 
+            All materials are provided to ensure transparency and reproducibility of the research findings.
+        </p>
+        
+        <div class="metadata">
+            <strong>Repository Information:</strong><br>
+            <strong>Study:</strong> BB2<br>
+            <strong>Last Updated:</strong> 2024<br>
+            <strong>License:</strong> [Specify License]<br>
+            <strong>DOI:</strong> [To be assigned]
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Repository Contents</h2>
+        <p>This repository includes the following files:</p>
+        
+        <ul class="file-list">
+            <li>
+                <strong>data1.csv</strong> - Primary dataset containing participant information, 
+                conditions, and outcome scores
+            </li>
+            <li>
+                <strong>data2.csv</strong> - Secondary dataset containing trial-level data including 
+                response times and accuracy measures
+            </li>
+            <li>
+                <strong>analysis.R</strong> - R script for statistical analysis and visualization 
+                of the experimental data
+            </li>
+            <li>
+                <strong>ethics_application.txt</strong> - Ethics application form documenting 
+                the ethical approval for this study
+            </li>
+            <li>
+                <strong>index.html</strong> - This documentation page
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Data Description</h2>
+        
+        <h3>Dataset 1 (data1.csv)</h3>
+        <table>
+            <tr>
+                <th>Variable</th>
+                <th>Description</th>
+                <th>Type</th>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>Unique record identifier</td>
+                <td>Integer</td>
+            </tr>
+            <tr>
+                <td>participant</td>
+                <td>Participant ID (anonymized)</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td>Participant age in years</td>
+                <td>Integer</td>
+            </tr>
+            <tr>
+                <td>condition</td>
+                <td>Experimental condition (control/experimental)</td>
+                <td>Categorical</td>
+            </tr>
+            <tr>
+                <td>score</td>
+                <td>Outcome measure score</td>
+                <td>Numeric</td>
+            </tr>
+            <tr>
+                <td>date</td>
+                <td>Date of data collection</td>
+                <td>Date</td>
+            </tr>
+        </table>
+
+        <h3>Dataset 2 (data2.csv)</h3>
+        <table>
+            <tr>
+                <th>Variable</th>
+                <th>Description</th>
+                <th>Type</th>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>Unique record identifier</td>
+                <td>Integer</td>
+            </tr>
+            <tr>
+                <td>participant</td>
+                <td>Participant ID (anonymized)</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>trial</td>
+                <td>Trial number</td>
+                <td>Integer</td>
+            </tr>
+            <tr>
+                <td>response_time</td>
+                <td>Response time in milliseconds</td>
+                <td>Numeric</td>
+            </tr>
+            <tr>
+                <td>accuracy</td>
+                <td>Response accuracy (0=incorrect, 1=correct)</td>
+                <td>Binary</td>
+            </tr>
+            <tr>
+                <td>notes</td>
+                <td>Additional notes</td>
+                <td>String</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Using the Data</h2>
+        
+        <h3>Requirements</h3>
+        <p>To run the analysis script, you will need:</p>
+        <ul>
+            <li>R (version 4.0 or higher recommended)</li>
+            <li>Required R packages: tidyverse, ggplot2</li>
+        </ul>
+
+        <h3>Running the Analysis</h3>
+        <p>To reproduce the analysis:</p>
+        <ol>
+            <li>Clone or download this repository</li>
+            <li>Install required R packages: <code>install.packages(c("tidyverse", "ggplot2"))</code></li>
+            <li>Set your working directory to the repository folder</li>
+            <li>Run the analysis script: <code>source("analysis.R")</code></li>
+        </ol>
+
+        <h3>Expected Outputs</h3>
+        <p>The analysis script will generate:</p>
+        <ul>
+            <li>Summary statistics for both datasets</li>
+            <li>Statistical test results (t-test)</li>
+            <li>Effect size calculations (Cohen's d)</li>
+            <li>Visualization: scores_by_condition.png</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Citation</h2>
+        <div class="citation">
+            If you use these data or materials, please cite:<br><br>
+            [Author List]. (Year). BB2 Study: [Full Title]. 
+            GitHub repository: https://github.com/micahamd/BB2-Files
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Ethics Statement</h2>
+        <p>
+            This research was conducted in accordance with ethical guidelines and received 
+            approval from the appropriate ethics committee. See the ethics_application.txt 
+            file for full details. All participant data has been anonymized to protect privacy.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Contact Information</h2>
+        <p>
+            For questions or additional information about this research, please contact:<br>
+            <strong>[Principal Investigator Name]</strong><br>
+            Email: [PI Email]<br>
+            Institution: [Institution Name]
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Links</h2>
+        <a href="data1.csv" class="button">Download data1.csv</a>
+        <a href="data2.csv" class="button">Download data2.csv</a>
+        <a href="analysis.R" class="button">Download analysis.R</a>
+        <a href="ethics_application.txt" class="button">View Ethics Application</a>
+        <a href="https://github.com/micahamd/BB2-Files" class="button">GitHub Repository</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BB2 Research Study. All rights reserved.</p>
+        <p>This repository is part of the supplementary materials for the BB2 manuscript.</p>
+    </footer>
+</body>
+</html>

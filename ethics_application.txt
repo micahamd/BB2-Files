@@ -1,0 +1,105 @@
+ETHICS APPLICATION FORM
+BB2 Research Study
+
+================================================================================
+SECTION 1: PROJECT INFORMATION
+================================================================================
+
+Project Title: BB2 Study - [Full Title Here]
+
+Principal Investigator: 
+    Name: [PI Name]
+    Institution: [Institution Name]
+    Email: [PI Email]
+    Phone: [PI Phone]
+
+Research Team Members:
+    - [Team Member 1]
+    - [Team Member 2]
+    - [Team Member 3]
+
+Project Duration: [Start Date] to [End Date]
+
+Funding Source: [Funding Agency/Internal]
+
+================================================================================
+SECTION 2: STUDY OBJECTIVES
+================================================================================
+
+Research Question:
+[Describe the main research question(s) this study aims to address]
+
+Study Objectives:
+1. [Primary objective]
+2. [Secondary objective]
+3. [Additional objectives]
+
+Scientific Background:
+[Provide brief background and rationale for the study]
+
+================================================================================
+SECTION 3: METHODOLOGY
+================================================================================
+
+Study Design: [e.g., Randomized Controlled Trial, Observational, etc.]
+
+Participant Recruitment:
+- Target Sample Size: [Number]
+- Inclusion Criteria: [List criteria]
+- Exclusion Criteria: [List criteria]
+- Recruitment Method: [Describe how participants will be recruited]
+
+Data Collection Procedures:
+[Describe procedures, measurements, interventions, etc.]
+
+Data Analysis Plan:
+[Describe planned statistical analyses]
+
+================================================================================
+SECTION 4: ETHICAL CONSIDERATIONS
+================================================================================
+
+Informed Consent:
+- All participants will provide written informed consent
+- Consent forms will be provided in accessible language
+- Participants will be informed of their right to withdraw at any time
+
+Risks and Benefits:
+- Potential Risks: [Describe any risks to participants]
+- Risk Mitigation: [Describe measures to minimize risks]
+- Potential Benefits: [Describe benefits to participants and/or society]
+
+Confidentiality and Data Protection:
+- Participant data will be anonymized using unique identifiers
+- Data will be stored securely [describe storage methods]
+- Only authorized research team members will have access to identifiable data
+- Data retention period: [Specify duration]
+- Data sharing: [Describe any data sharing plans]
+
+Vulnerable Populations:
+[Indicate if study involves vulnerable populations and additional protections]
+
+================================================================================
+SECTION 5: DECLARATIONS
+================================================================================
+
+Conflicts of Interest:
+[Declare any conflicts of interest or state "None"]
+
+Previous Ethics Approvals:
+[List any previous related approvals or state "Not applicable"]
+
+Principal Investigator Signature: ___________________  Date: __________
+
+Ethics Committee Use Only:
+Application Number: _______________
+Date Received: _______________
+Decision: _______________
+Date of Decision: _______________
+Comments:
+
+
+
+================================================================================
+END OF ETHICS APPLICATION FORM
+================================================================================

@@ -1,0 +1,11 @@
+id,participant,age,condition,score,date
+1,P001,25,control,85,2024-01-15
+2,P002,28,experimental,92,2024-01-16
+3,P003,31,control,78,2024-01-17
+4,P004,26,experimental,88,2024-01-18
+5,P005,29,control,81,2024-01-19
+6,P006,33,experimental,95,2024-01-20
+7,P007,27,control,83,2024-01-21
+8,P008,30,experimental,90,2024-01-22
+9,P009,24,control,79,2024-01-23
+10,P010,32,experimental,93,2024-01-24
