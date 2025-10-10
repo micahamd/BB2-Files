@@ -1,0 +1,11 @@
+id,participant,trial,response_time,accuracy,notes
+1,P001,1,1250,1,correct
+2,P001,2,1180,1,correct
+3,P001,3,1320,0,incorrect
+4,P002,1,980,1,correct
+5,P002,2,1050,1,correct
+6,P002,3,1100,1,correct
+7,P003,1,1400,1,correct
+8,P003,2,1350,0,incorrect
+9,P003,3,1290,1,correct
+10,P004,1,1020,1,correct
