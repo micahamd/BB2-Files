@@ -541,6 +541,110 @@ i2.p <- ind.plot(bb2.long,ylabel="Normalized Change Scores (Study 2)")
 i.all.p <- ggpubr::ggarrange(i1.p,i2.p,labels = c("A","B"),nrow=2,common.legend = T)
 
 
+# Response to reviewers:-------
+# Comparing Sentiments to Moods ---------
+# Extract mood summaries for each sentiment category
+bb.freq.mood <- bb2.freq %>% 
+  pivot_longer(cols=c(Peacefulness,Calmness,Happiness,Focus,Contentment),
+               names_to = "Moods",values_to = "Change.Scores") %>% 
+  mutate(Moods = as.factor(Moods)) %>% 
+  mutate(Qual = as.factor(`Qualitative Category`)) 
+
+# View summary plot
+bb.freq.mood %>%   
+  ggplot(aes(x=Coded.Responses,y=Change.Scores,fill=Moods))+
+  geom_boxplot(alpha=.6,show.legend = F)+
+  geom_hline(yintercept = 0,linetype="dashed")+
+  facet_wrap(~Moods,ncol=5) +
+  xlab("Coded sentiments")+
+  ylab("Mood change scores")+
+  ggthemes::theme_base()+
+  scale_fill_brewer(palette = "Blues") 
+
+
+# View descriptives
+bb.freq.mood.sum <- bb.freq.mood %>% 
+  group_by(Moods,Coded.Responses) %>% 
+  summarise(mean.change=round(mean(Change.Scores),2),
+            sd.change=round(sd(Change.Scores),2))
+
+
+# Run five within-sub ANOVAs
+bb.freq.mood.aov <- bb.freq.mood %>% 
+  group_by(Moods) %>% 
+  anova_test(Change.Scores~Coded.Responses,effect.size = "pes")
+
+# Run post-hoc tests
+
+bb.freq.mood %>% 
+  group_by(Moods) %>% 
+  tukey_hsd(Change.Scores~Coded.Responses) %>% 
+  as.data.frame() %>% 
+  write.csv(file = "sentiment.tukey.csv")
+  
+# See results
+bb.freq.mood.aov %>% 
+  as.data.frame() %>% 
+  mutate(res = paste0(
+    "for ", Moods, ", ",
+    "F (",DFn, ", ", DFd,") = ",
+    round(F,2),", p = ", (round(p,3)+.001),", ",
+    "pes = ", round(pes,3)
+  )) %>% 
+  dplyr::select(res)
+
+# New Summary Figure S9 ---------
+
+# Combine all data
+# All data
+b1 <- bb1.long %>% mutate(Study = as.factor(rep("Study 1"))) %>% dplyr::select(c(Study,Group,Mood,change.scores))
+b2 <- bb2.long %>% mutate(Study = as.factor(rep("Study 2"))) %>% dplyr::select(c(Study,Group,Mood,change.scores))
+b.all <- rbind.data.frame(b1,b2)%>% mutate(Dataset = as.factor(rep("Full\nDataset")))
+
+# Outlier removed data
+b1.no <- bb1.long.no.outliers %>% mutate(Study = as.factor(rep("Study 1"))) %>% dplyr::select(c(Study,Group,Mood,change.scores))
+b2.no <- bb2.long.no.outliers %>% mutate(Study = as.factor(rep("Study 2"))) %>% dplyr::select(c(Study,Group,Mood,change.scores))
+b.all.no <- rbind.data.frame(b1,b2) %>% mutate(Dataset = as.factor(rep("Outlier\nRemoved Data")))
+
+# Merge for single figure 
+b.all.no.all <- rbind.data.frame(b.all,b.all.no)
+
+# Extract summary stats (for 'b.all' only)
+b.all.sum <- b.all %>% 
+  group_by(Study,Group,Mood) %>% 
+  get_summary_stats(change.scores) %>% 
+  mutate(lower = mean - (ci/2),upper = mean + (ci/2)) %>% 
+  dplyr::select(Study, Group, Mood, mean, lower, upper)
+
+# Summary plot with equivalence boundary defined earlier ('eqb_value') ~ Replaces Figure 2 in the main manuscript
+
+b.all.sum %>% 
+  ggplot(aes(x = Mood,y=mean,fill=Study))+
+  geom_hline(yintercept = 0,linetype="dashed")+
+  geom_rect(
+    mapping = aes(xmin = -Inf, xmax = Inf, ymin = -eqb_value, ymax = eqb_value), 
+    fill = "lightgrey", color = "lightgrey", alpha = 0.1
+  )+
+  geom_crossbar(aes(ymin=lower, ymax=upper),alpha=.9,width=.3,show.legend = T)+
+  facet_wrap(~Group,nrow=2,
+             scales="free_y")+
+  ylab("Mood change scores")+xlab("Moods")+
+  ggthemes::theme_base()+
+  theme(legend.position="top")+
+  coord_flip()
+
+
+# Bar plot containing all data
+# b.all %>% 
+#   ggplot(aes(x=Mood,y=change.scores,fill=Mood))+
+#   geom_boxplot(alpha=.4,show.legend = F)+
+#   geom_hline(yintercept = 0,linetype="dashed")+
+#   facet_wrap(Study~Group,nrow=2)+
+#   ggthemes::theme_base()
+
+
+# ---------------------
+
 
 
 # ---------------------
